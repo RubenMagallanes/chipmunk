@@ -1,0 +1,7 @@
+qrencode [flags]  [ takes input from stdin if no input ]
+flags:	-o	"output-filename"
+	-t	file format (dont touch)
+	-s	border size (in pixels)
+	-l H	error correction level l,m,q,h
+	-8	encode in 8 bit mode (what does this do?)
+	-S	structured symbol encode (for files?)

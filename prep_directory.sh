@@ -1,5 +1,9 @@
 echo "creating new entry in index"
 #make new entry in index.csv, save directory name
+#assumes index.csv exists
+#TODO change from csv to json, handle in python
+
+
 
 echo "archiving and compressing directory";
 #create tarball of directory

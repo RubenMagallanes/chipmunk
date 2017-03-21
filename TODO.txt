@@ -1,0 +1,18 @@
+fill out :
+	init.sh
+	prep_directory.sh
+	process_tarball.sh
+	upload.sh
+note: the function of these may be easier to carry out with python
+
+then write reverse:
+	download
+	decode
+	[recreate]
+	
+
+then write script to search databse
+
+
+
+then write utility that combines these all and calls them from a main func
