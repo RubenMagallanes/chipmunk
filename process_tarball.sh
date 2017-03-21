@@ -4,6 +4,12 @@
 #split -b 2953 $HASH_0000.part 
 
 #turn each file into qr code, save in $DIR/qr
+#qrencode 
+#	-o filename
+#	-l L [error correction minimal
+#	-v 40 [protocol version 40 
+#	-S [structured (idk if we want this)
+#	-8 [8 bit mode (also idk if we want this either)
 
 #depending on uploading to imgur or youtube or whatever, stop here or 
 #encode qr codes into video
