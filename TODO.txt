@@ -10,6 +10,7 @@ then write reverse:
 	decode
 	[recreate]
 	
+	!!check youtube compression doesnt ruin qr code, may have to use [imgur] or smth similar
 
 then write script to search databse
 
