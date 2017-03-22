@@ -19,3 +19,6 @@ echo "recording filenames and structure or directory";
 
 #could save index.csv entry to variable, and save entire line now
 #TODO make this a python script perhaps, easier to throw around variables
+
+
+#

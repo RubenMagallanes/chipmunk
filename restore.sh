@@ -5,6 +5,6 @@
 #i guess just strip?
 
 #cat file pieces back in to one file
-
+#cat xa{a..g} -> xaa, xab, xac, xad....xag 
 
 #untar tarball -> origional directory 
