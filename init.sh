@@ -3,7 +3,8 @@
 #check if directory ~/chipmunk exists, create if not
 echo "chipmunk init script called"
 
-DIRECTORY=~/.chipmunk/		#cant have spaces in dir name as that would need quotes, but quotes prevent expansion of '~' so :)
+#DIRECTORY=~/.chipmunk/		#cant have spaces in dir name as that would need quotes, but quotes prevent expansion of '~' so :)
+DIRECTORY=test/chipmunk/	#for testing TODO delete this line and uncomment above
 if [ ! -d "$DIRECTORY" ] 
 then
 	mkdir "$DIRECTORY"
