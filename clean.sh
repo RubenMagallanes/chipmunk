@@ -1,5 +1,5 @@
 rm test/.archive.tar.gz
-rm chipmunk/*
-rm hash.txt
+rm test/chipmunk/*
+rm test/hash.txt
 
 
