@@ -88,10 +88,10 @@ print("hashing tarball")
 hash_path = path + 'hash.txt'
 
 #touch hash file
-touch_command = ['touch', hash_path]
-if call (touch_command) != 0 :
-	print("error touching hash file")
-	exit()
+#touch_command = ['touch', hash_path]
+#if call (touch_command) != 0 :
+#	print("error touching hash file")
+#	exit()
 
 #open file so we can write to it 
 diskhash = open(hash_path, 'w')
@@ -149,25 +149,25 @@ print("new entry added to database successfully")
 #TODO  do some kind of interactive where user enters one by one and we add to csv with each \n
 #while loop
 
-print("creating tags file")
-touch_command = ['touch', db_path + dir_hash + '.tags.csv']
-if call(touch_command) != 0 :
-	print("failed to touch tags file")
-	exit()
+#print("creating tags file")
+#touch_command = ['touch', db_path + dir_hash + '.tags.csv']
+#if call(touch_command) != 0 :
+#	print("failed to touch tags file")
+#	exit()
 
 #open tags file for writing to
-tags_file = open(db_path + dir_hash + 'tags.csv', 'w')
+tags_file = open(db_path + dir_hash + '.tags.csv', 'w')
 tags_command = ['echo', '"tags"'] 
 if call(tags_command, stdout=tags_file) != 0 :
 	print("creating tags file failed for some reason")
 	print("rerun this script ")
 	exit()
 	
-print("creating tree file")
-touch_command = ['touch', db_path + dir_hash + '.tree']
-if call(touch_command) != 0 :
-	print("failed to touch tree file")
-	exit()
+#print("creating tree file")
+#touch_command = ['touch', db_path + dir_hash + '.tree']
+#if call(touch_command) != 0 :'
+#	print("failed to touch tree file")
+#	exit()
 
 #open tree file for writing to
 tree_file = open(db_path + dir_hash + '.tree', 'w')
