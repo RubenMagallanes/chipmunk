@@ -7,7 +7,7 @@ from sys import exit
 #global variables yay
 
 directory_path = "./test/backmeup"	# eventually take this from args
-db_path = "./test/chipmunk/index.json"		#location of db, ref from config
+db_path = "./test/chipmunk/"		#location of db, ref from config
 
 #these are all placeholders, will overwrite in seperate_path
 path = "directory path"
@@ -121,14 +121,14 @@ def add_to_db():
 	"""
 	
 	# load db into $data variable
-	with open(db_path) as data_file:
+	with open(db_path + 'index.json') as data_file:
 		data = json.load(data_file)
 
 	#add new entry to database
 	data["entries"].append(new_entry)
 
 	#save back to file
-	with open('db_path', 'w') as data_file_w : 
+	with open(db_path + 'index.json', 'w') as data_file_w : 
 		json.dump(data, data_file_w)
 
 	print("new entry added to database successfully")
@@ -141,14 +141,14 @@ def create_tags_file():
 	"""
 	#TODO  do some kind of interactive where user enters one by one and we add to csv with each \n
 	#while loop
-	tags_command = ['echo', '"tags"', '>', path + dir_hash + '.tags.csv'] 
+	tags_command = ['echo', '"tags"', '>', db_path + dir_hash + '.tags.csv'] 
 	if call(tags_command) != 0 :
 		print("creating tags file failed for some reason")
 		print("rerun this script ")
 		exit()
 	
 	#save output of tree command to file
-	tree_command = ['tree', 'directory_path', '>', path + dir_hash +'.tree']
+	tree_command = ['tree', 'directory_path', '>', db_path + dir_hash +'.tree']
 	if call(tree_command) != 0 :
 		print("tree command returned error")
 
