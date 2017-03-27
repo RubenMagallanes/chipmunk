@@ -170,6 +170,7 @@ if call(tags_command, stdout=tags_file) != 0 :
 #	exit()
 
 #open tree file for writing to
+print("tree-ing directory: " + directory_path)
 tree_file = open(db_path + dir_hash + '.tree', 'w')
 tree_command = ['tree', 'directory_path']
 if call(tree_command, stdout=tree_file) != 0 :
