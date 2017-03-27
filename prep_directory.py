@@ -4,6 +4,8 @@ from pprint import pprint
 from subprocess import call
 from sys import exit
 
+#global variables yay
+
 directory_path = "./test/backmeup"	# eventually take this from args
 db_path = "./test/chipmunk/index.json"		#location of db, ref from config
 
@@ -139,10 +141,24 @@ def create_tags_file():
 	"""
 	#TODO  do some kind of interactive where user enters one by one and we add to csv with each \n
 	#while loop
+	tags_command = ['echo', '"tags"', '>', path + dir_hash + '.tags.csv'] 
+	if call(tags_command) != 0 :
+		print("creating tags file failed for some reason")
+		print("rerun this script ")
+		exit()
 	
-	#tree_command = []
+	#save output of tree command to file
+	tree_command = ['tree', 'directory_path', '>', path + dir_hash +'.tree']
+	if call(tree_command) != 0 :
+		print("tree command returned error")
 
-	#execute tree
+	
 
-	
-	
+
+#actually execute these. 
+seperate_path()
+archive_dir()
+hash_tarball()
+read_hash()
+add_to_db()
+create_tags_file()
