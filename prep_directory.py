@@ -7,7 +7,7 @@ from sys import exit
 #global variables yay
 
 directory_path = "./test/backmeup"	# eventually take this from args
-db_path = "./test/chipmunk/"		#location of db, ref from config, default is ~/.chipmunk  
+db_path = "~/.chipmunk/"		#location of db
 
 #these are all placeholders, will overwrite in seperate_path
 path = "directory path"
@@ -106,6 +106,9 @@ if call(hash_command, stdout=diskhash) != 0 :
 
 print("md5 hash created successfully: "+ hash_path)
 
+# also write current hash to .current_hash.temp file to keep track of current
+# hash between scrips
+#TODO
 
 
 """	

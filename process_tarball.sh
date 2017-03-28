@@ -1,4 +1,4 @@
-DBPATH="test/chipmunk/" # change to ~/.chipmunk
+DBPATH="~/.chipmunk/" 
 
 #need hash path, directory path in tempfile 
 

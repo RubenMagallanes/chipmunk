@@ -29,3 +29,8 @@ then
 	>"${DIRECTORY}prefs"
 	
 fi
+
+#check if ~/.chipmunk/.current_hash exists, clear it
+
+#check if ~/.chipmunk/.current_dir exists, clear it
+
