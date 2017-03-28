@@ -58,7 +58,10 @@ for dir in directories_list :
 
 output_filepath = path + '.archive.tar.gz'
 
-	
+#save $path to ~/.chipmunk/.current_dir
+cur_dir_file = open(db_path+'.current_dir')
+cur_dir_file.write(path)
+cur_dir_file.close()
 
 """
 2. archive & compress dir, save as archive.tar.gz to same path
@@ -102,13 +105,11 @@ if call(hash_command, stdout=diskhash) != 0 :
 	print("tar returned nonzero exit code, something screwed up")
 	print("assume archive is corrupted, ")
 	print("rerun this step before moving on to next step")
+	diskhash.close()
 	exit()
 
+diskhash.close()
 print("md5 hash created successfully: "+ hash_path)
-
-# also write current hash to .current_hash.temp file to keep track of current
-# hash between scrips
-#TODO
 
 
 """	
@@ -123,6 +124,12 @@ with open(hash_path) as hashfile:
 
 #create new database entry
 new_entry = {'name':directory_name, 'hash': dir_hash}
+
+# also write current hash to .current_hash file to keep track of current
+# hash between scrips
+cur_hash_file = open(db_path + '.current_hash')
+cur_hash_file.write(dir_hash)
+cur_hash_file.close()
 
 
 """
@@ -164,8 +171,10 @@ tags_command = ['echo', '"tags"']
 if call(tags_command, stdout=tags_file) != 0 :
 	print("creating tags file failed for some reason")
 	print("rerun this script ")
+	tags_file.close()
 	exit()
 	
+tags_file.close()
 #print("creating tree file")
 #touch_command = ['touch', db_path + dir_hash + '.tree']
 #if call(touch_command) != 0 :'
@@ -179,8 +188,9 @@ tree_command = ['tree', 'directory_path']
 if call(tree_command, stdout=tree_file) != 0 :
 	print("tree command returned error")
 	print("failed to write to tree file")
+	tree_file.close()
 	exit()
 	
-
+tree_file.close()
 print("directory archived and data files created successfully ")
 
