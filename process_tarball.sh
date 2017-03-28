@@ -28,7 +28,7 @@ fi
 #split tarball with name .archive.tar.gz into part files, save in $DIR/part
 
 
-#split -b 2953 $HASH_0000.part 
+#split -b 2953 in $HASH.part_ 
 
 #turn each file into qr code, save in $DIR/qr
 #qrencode 
