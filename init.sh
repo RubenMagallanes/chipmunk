@@ -23,5 +23,9 @@ fi
 
 #check if ~/chipmunk/prefs file exists, create if not & populate with text (like username and psswd for upload site, api key if necc'y)
 
-
-
+if [ ! "${DIRECTORY}prefs" ]
+then
+	touch "${DIRECTORY}prefs"
+	>"${DIRECTORY}prefs"
+	
+fi
