@@ -1,6 +1,11 @@
-DBPATH="~/.chipmunk/" 
+#ASSUMES:				#these should be from previous script
+#	~/.chipmunk/.current_dir	contains path to .archive.tar.gz
+#	~/.chipmunk/.current_hash	contains hash of .archive.tar.gz
 
-#need hash path, directory path in tempfile 
+
+DBPATH=~/.chipmunk/			#chipmunk directory 
+WORKINGDIR=$(<${DBPATH}.current_dir)	#read working directory from file
+HASH=$(<${DBPATH}.current_hash)		#read hash from file
 
 
 #mkdir name $HASH_temp to save part files and qr codes in to 
