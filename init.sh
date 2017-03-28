@@ -1,10 +1,10 @@
 #!/bin/bash
-
-#check if directory ~/chipmunk exists, create if not
 echo "chipmunk init script called"
 
-#DIRECTORY=~/.chipmunk/		#cant have spaces in dir name as that would need quotes, but quotes prevent expansion of '~' so :)
-DIRECTORY=test/chipmunk/	#for testing TODO delete this line and uncomment above
+#check if directory ~/.chipmunk exists, create if not
+#cant have spaces in dir name as that would need quotes, but quotes prevent expansion of '~' so :)
+DIRECTORY=~/.chipmunk/	
+
 if [ ! -d "$DIRECTORY" ] 
 then
 	mkdir "$DIRECTORY"
@@ -30,7 +30,22 @@ then
 	
 fi
 
-#check if ~/.chipmunk/.current_hash exists, clear it
+#ensure ~/.chipmunk/.current_hash exists, then clear it
 
-#check if ~/.chipmunk/.current_dir exists, clear it
+if [ ! "${DIRECTORY}.current_hash" ]
+then
+	touch "${DIRECTORY}.current_hash"
+fi
+
+>"${DIRECTORY}.current_hash"
+
+
+#ensure ~/.chipmunk/.current_dir exists, then clear it
+
+if [ ! "${DIRECTORY}.current_dir" ] 
+then
+	touch "${DIRECTORY}.current_dir"
+fi
+
+>"${DIRECTORY}.current_dir"
 
