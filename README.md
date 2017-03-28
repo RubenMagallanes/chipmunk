@@ -1,4 +1,9 @@
-# chipmunk
+# chipmunk  
+
+This project is intended as more of a proof of concept than anything else.  
+The end goal is a series of scripts that together, backup a local directory to a media hosting website.  
+This is acomplished by splitting a tarball into pieces, encoding these piece to QR codes, then uploading these codes to a media hosting website, either individually or in a video container (such as mp4). Challenges include finding a hosting site whos compression doesn't ruin the QR codes, and keeping track of the urls.  
+
 any .sh file may at some point be replaced with a .py file  
 The goal is to create a python (or something similar) script that automates these steps, and records details about backed up items so the user can keep track of what's where and all that.  
 
