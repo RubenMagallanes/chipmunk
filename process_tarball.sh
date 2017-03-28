@@ -18,6 +18,10 @@ if [ ! -d "$TEMP_DIR" ]
 then
 	mkdir "$TEMP_DIR"
 	echo "$TEMP_DIR created"
+else
+	#dont delete it for the user in case it contains important stuff
+	echo "somehow theres already a directory what that name"
+	echo "check it yourself, and delete it, then re run this script"
 fi
 
 
