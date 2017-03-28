@@ -1,8 +1,13 @@
 fill out :
-	init.sh
+	init.sh		
+		-create .chipmunk directory + index, prefs file
 	prep_directory.sh
+		-create tarball, hash, entry in index, tree file
 	process_tarball.sh
+		-split tarball, encode each into QR code. chuck in mp4 container
 	upload.sh
+		-upload vid to site, need api key
+
 note: the function of these may be easier to carry out with python
 
 then write reverse:

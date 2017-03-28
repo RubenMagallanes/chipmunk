@@ -1,5 +1,11 @@
+DBPATH="test/chipmunk/" # change to ~/.chipmunk
+
+#need hash path, directory path in tempfile 
+
 
 #mkdir name $HASH_temp to save part files and qr codes in to 
+if
+
 #split tarball with name $HASH into part files, save in $DIR/part
 #split -b 2953 $HASH_0000.part 
 

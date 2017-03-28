@@ -15,7 +15,7 @@ directory_name = "dir name"
 output_filepath = "archive output filepath"
 
 #hash tarball
-hash_path = "hashoath"
+hash_path = "path + hash.txt"
 
 #read hash
 dir_hash = "hash read from file"
