@@ -1,6 +1,9 @@
 #read qr codes into file pieces using zbarimg
 
 #zbarimg -q code.png > out.part 
+#zbarimg -q	quiet
+#	--raw	only output data
+
 #ISSUES: zbar img appends a newline to the end of output
 #i guess just strip?
 
