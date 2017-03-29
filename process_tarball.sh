@@ -43,13 +43,20 @@ fi
 #level 40 QR code with low error correction can contain about 2953 bytes or so. Lets split into 2952 or 2920 for a nice round number
 split -b 2952 ${WORKINGDIR}.archive.tar.gz ${TEMP_DIR}${HASH}.part_ 
 
-#turn each file into qr code, save in $DIR/qr
+#turn each file into qr code, save in $QR_DIR
+for file in ${TEMP_DIR}*
+do
+	TEXT=$(<$file)
+	echo "encoding ${file} into QR code"
+	qrencode -l L -v 40 -o ${QR_DIR}${file}.qr $TEXT
+done
+
 
 #qrencode 
 #	-o filename
 #	-l L [error correction minimal
 #	-v 40 [protocol version 40 
-#	-S [structured (idk if we want this)
+#	-S [structured (dont think we want this)
 #	-8 [8 bit mode (also idk if we want this either)
 
 #depending on uploading to imgur or youtube or whatever, stop here or 
