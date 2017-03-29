@@ -23,6 +23,7 @@ else
 	#dont delete it for the user in case it contains important stuff
 	echo "somehow theres already a directory what that name"
 	echo "check it yourself, and delete it, then re run this script"
+	exit
 fi
 
 #create directory for qr codes 
@@ -37,6 +38,7 @@ then
 	echo "$QR_DIR created"
 else
 	echo "somehow directory already exists, delete it then rerun script"
+	exit
 fi
 
 #split tarball with name .archive.tar.gz into part files, save in $TEMP_DIR/part
@@ -54,13 +56,15 @@ done
 
 #qrencode 
 #	-o filename
-#	-l L [error correction minimal
-#	-v 40 [protocol version 40 
-#	-S [structured (dont think we want this)
-#	-8 [8 bit mode (also idk if we want this either)
+#	-l L [error correction minimal]
+#	-v 40 [protocol version 40 ]
+#	-S [structured (dont think we want this)]
+#	-8 [8 bit mode (also idk if we want this either)]
 
 #depending on uploading to imgur or youtube or whatever, stop here or 
 #encode qr codes into video
 
-#cleanup temp directory?
+#cleanup temp directory
+rm -rf $TEMP_DIR
+echo "${TEMP_DIR} removed"
 
