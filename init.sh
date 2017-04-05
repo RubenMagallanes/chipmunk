@@ -30,6 +30,8 @@ then
 	echo "prefs file created"
 	
 fi
+#TODO change above to include client-secrets.json for yt upload
+#ensure client secrets exists, if not, touch file & call create_client_screts.py
 
 #ensure ~/.chipmunk/.current_hash exists, then clear it
 
