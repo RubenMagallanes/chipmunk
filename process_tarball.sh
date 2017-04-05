@@ -63,7 +63,7 @@ done
 
 #depending on uploading to imgur or youtube or whatever, stop here or 
 #encode qr codes into video
-
+#TODO
 #cleanup temp directory
 rm -rf $TEMP_DIR
 echo "${TEMP_DIR} removed"

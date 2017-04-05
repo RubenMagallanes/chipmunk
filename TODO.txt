@@ -1,3 +1,6 @@
+go through all files and check TODOs in them
+
+
 fill out :
 	init.sh		
 		-create .chipmunk directory + index, prefs file
@@ -16,9 +19,13 @@ then write reverse:
 	[recreate]
 	
 	!!check youtube compression doesnt ruin qr code, may have to use [imgur] or smth similar
-
+make sure all #! match re python version
 then write script to search databse
 
-
+create_client_secrets script tells user what to do more
+also do dependancys
++google-api-python-client - echo to user "library needed, instll it then retry"
 
 then write utility that combines these all and calls them from a main func
+
+
