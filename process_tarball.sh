@@ -52,18 +52,14 @@ do
 	echo "encoding ${file} into QR code"
 	qrencode -l L -v 40 -o ${QR_DIR}${file}.qr $TEXT
 done
+#	-8 [8 bit mode -test whether we want this?
 
-
-#qrencode 
-#	-o filename
-#	-l L [error correction minimal]
-#	-v 40 [protocol version 40 ]
-#	-S [structured (dont think we want this)]
-#	-8 [8 bit mode (also idk if we want this either)]
-
-#depending on uploading to imgur or youtube or whatever, stop here or 
 #encode qr codes into video
 #TODO
+#for each file in ${QR_DIR}
+ffmpeg -framerate 60 -pattern_type glob -i '${QR_DIR}*.qr' ${QR_DIR}output.mp4
+
+
 #cleanup temp directory
 rm -rf $TEMP_DIR
 echo "${TEMP_DIR} removed"
