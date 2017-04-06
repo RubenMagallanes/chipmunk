@@ -1,5 +1,7 @@
 #!/bin/bash
 echo "chipmunk init script called"
+#TODO check dependancys - all programs used
+#ffmpeg, touch, cat, 
 
 #check if directory ~/.chipmunk exists, create if not
 #cant have spaces in dir name as that would need quotes, but quotes prevent expansion of '~' so :)
