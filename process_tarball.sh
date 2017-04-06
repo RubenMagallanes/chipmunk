@@ -54,11 +54,9 @@ do
 done
 #	-8 [8 bit mode -test whether we want this?
 
-#encode qr codes into video
-#TODO
-#for each file in ${QR_DIR}
-ffmpeg -framerate 60 -pattern_type glob -i '${QR_DIR}*.qr' ${QR_DIR}output.mp4
-
+#encode qr codes into video, 60 frames using bash style * glob
+#save video in .chipmunk directory
+ffmpeg -framerate 60 -pattern_type glob -i '${QR_DIR}*.qr' ${DBPATH}${HASH}.video.mp4
 
 #cleanup temp directory
 rm -rf $TEMP_DIR
