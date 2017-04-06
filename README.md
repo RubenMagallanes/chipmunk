@@ -12,6 +12,12 @@ intended order of script execution:
 + prep_directory.sh - create entry in index.json, create tarball of directory  
 + process_tarball.sh - split tarball into 2950 byte chunks, turn each chunk in to a QR code, [encode in to video file]  
 + upload.sh - upload to chosen site + record urls in database  
+usage : python upload_video.py --file="/tmp/test_video_file.flv"
+                       --title="Summer vacation in California"
+                       --description="Had fun surfing in Santa Cruz"
+                       --keywords="surfing,Santa Cruz"
+                       --category="22"
+                       --privacyStatus="private"
 
 + download.sh - download from site  
 + restore.sh - extract QR codes from video, scan into chinks, cat chunks together, untar back to origional directory  
