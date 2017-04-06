@@ -177,6 +177,9 @@ if call(tags_command, stdout=tags_file) != 0 :
 	
 tags_file.close()
 
+#touch directory/hash.url file so upload.sh 
+#can write url to it for later
+
 url_file_path = db_path + dir_hash + '.url'
 url_command = ['touch', 'url_file_path']
 if call (url_command) != 0 :
