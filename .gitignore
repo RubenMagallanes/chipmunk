@@ -1,2 +1,4 @@
 backup*
 test/.archive.tar.gz
+
+.DS_Store
