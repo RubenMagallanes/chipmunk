@@ -1,5 +1,8 @@
-#if uploading as images:
-#	upload all the qr codes to imgur, keeping note of filename,url 
-#	combination, saving to ~/chipmunk/$hash.urls
 #else, upload to youtube, save hash,url in index.csv
+
+#check if client secrets file exists in ~/.chipmunk/cient_secrets
+#call upload_video.py passing in required args. read args from file? 
+
+
+
 
