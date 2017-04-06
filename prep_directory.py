@@ -155,6 +155,7 @@ print("new entry added to database successfully")
 
 """
 6. create $hash .tags file, also create .tree file with tree output
+	also create $hash.url
 """
 #TODO  do some kind of interactive where user enters one by one and we add to csv with each \n
 #while loop
@@ -175,6 +176,15 @@ if call(tags_command, stdout=tags_file) != 0 :
 	exit()
 	
 tags_file.close()
+
+url_file_path = db_path + dir_hash + '.url'
+url_command = ['touch', 'url_file_path']
+if call (url_command) != 0 :
+	print('creating url file failed')
+	print('consider creating one manually,')
+	print('although theres probably a deeper reason this failed')
+	print('use the hash: ' + dir_hash)
+
 #print("creating tree file")
 #touch_command = ['touch', db_path + dir_hash + '.tree']
 #if call(touch_command) != 0 :'
