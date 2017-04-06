@@ -23,13 +23,13 @@ fi
 
 #check if ~/chipmunk/prefs file exists, create if not & populate with text (like username and psswd for upload site, api key if necc'y)
 
-if [ ! -e "${DIRECTORY}prefs" ]
-then
-	touch "${DIRECTORY}prefs"
-	>"${DIRECTORY}prefs"
-	echo "prefs file created"
-	
-fi
+#if [ ! -e "${DIRECTORY}prefs" ]
+#then
+#	touch "${DIRECTORY}prefs"
+#	>"${DIRECTORY}prefs"
+#	echo "prefs file created"
+#	
+#fi
 
 #TODO change above to include client-secrets.json for yt upload
 #ensure client secrets exists, if not, touch file & call create_client_screts.py
