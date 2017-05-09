@@ -28,4 +28,4 @@ also do dependancys
 
 then write utility that combines these all and calls them from a main func
 
-
+when exiting with failure from if checks, add negative exit code
