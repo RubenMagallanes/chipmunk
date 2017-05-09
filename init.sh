@@ -39,6 +39,7 @@ if [ ! -e "${DIRECTORY}client_secrets.json" ]
 then
 	touch "${DIRECTORY}client_secrets.json"
 	./create_client_secrets.py
+	echo "fill out ~/.chipmunk/client_secrets.json with your oauth credentials to access the youtube API"
 fi
 
 #ensure ~/.chipmunk/.current_hash exists, then clear it
