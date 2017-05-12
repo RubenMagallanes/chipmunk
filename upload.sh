@@ -23,9 +23,9 @@ opt+=(--description="chipmunk autoupload")
 opt+=(--keywords="chipmunk")
 opt+=(--category="28")	# science and tech category
 opt+=(--privacyStatus="private")
-
+#privacy may have to be set to public for downloading ease
 
 #call upload_video.py
-#TODO call python2 or python3 in script's source shebang depending
-python upload_video.py "${opt[@]}"
+python2 upload_video.py "${opt[@]}"
 
+echo "video should have been uploaded"
