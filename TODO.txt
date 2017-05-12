@@ -1,17 +1,19 @@
 go through all files and check TODOs in them
 validate upload_video .py script actually works AND writes url to file
+upload a single video to chipmunk youtube account so it accepts scripted uploads
 
 fill out :
-	init.sh		
-		-create .chipmunk directory + index, prefs file
-	prep_directory.sh
+	init.sh										done
+		-create .chipmunk directory + index, prefs file	
+	prep_directory.sh								done
 		-create tarball, hash, entry in index, tree file
-	process_tarball.sh
+	process_tarball.sh								done
 		-split tarball, encode each into QR code. chuck in mp4 container
-	upload.sh
-		-upload vid to site, need api key
+	upload.sh									done
+		-calls upload_video.py script, writes url to file
+		- need api key
 
-note: the function of these may be easier to carry out with python
+
 
 then write reverse:
 	download
