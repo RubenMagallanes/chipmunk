@@ -135,6 +135,13 @@ def resumable_upload(insert_request):
       status, response = insert_request.next_chunk()
       if 'id' in response:
         print "Video id '%s' was successfully uploaded." % response['id']
+	#write video url to file
+	file_path = '.latest_video_uploaded'
+	file_body = "www.youtube.com/watch?=v"+response['id']
+	with open(file_path, 'w') as f:
+	  f.write(file_body)
+	print "url written to file: .latest_video_uploaded"
+	# TODO v2 write to index file
       else:
         exit("The upload failed with an unexpected response: %s" % response)
     except HttpError, e:
