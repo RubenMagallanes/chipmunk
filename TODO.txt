@@ -1,5 +1,5 @@
 go through all files and check TODOs in them
-
+validate upload_video .py script actually works AND writes url to file
 
 fill out :
 	init.sh		
